@@ -18,7 +18,7 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-  <title>这是我的第一个博客 - Hexo</title>
+  <title>maven - Hexo</title>
 
   <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
 
@@ -163,7 +163,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="这是我的第一个博客">
+            <span class="h2" id="subtitle" title="maven">
               
             </span>
 
@@ -173,8 +173,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2021-10-05 00:00" pubdate>
-        October 5, 2021 am
+      <time datetime="2021-07-12 00:00" pubdate>
+        July 12, 2021 am
       </time>
     </span>
   
@@ -185,7 +185,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      26 字
+      1.2k 字
     </span>
   
 
@@ -195,7 +195,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      1
+      14
        分钟
     </span>
   
@@ -225,31 +225,68 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">这是我的第一个博客</h1>
+            <h1 style="display: none">maven</h1>
             
             <div class="markdown-body">
-              <h1 id="这是我的第一个个人博客"><a href="#这是我的第一个个人博客" class="headerlink" title="这是我的第一个个人博客"></a>这是我的第一个个人博客</h1><h2 id="我很开心"><a href="#我很开心" class="headerlink" title="我很开心"></a>我很开心</h2><h3 id="欢迎大家来我的博客参观"><a href="#欢迎大家来我的博客参观" class="headerlink" title="欢迎大家来我的博客参观"></a>欢迎大家来我的博客参观</h3>
+              <h1 id="1、Maven"><a href="#1、Maven" class="headerlink" title="1、Maven"></a>1、Maven</h1><h2 id="1-1什么是maven"><a href="#1-1什么是maven" class="headerlink" title="1.1什么是maven"></a>1.1什么是maven</h2><p>Maven的本质是项目管理工具，是跨平台的，最大化的消除了构建的重复，并未绝大多部分的构建任务提供了已经实现的插件。它帮助我们标准化构建过程，maven作为开放的框架，提供了公共的接口，方便同第三方插件继承，程序员可以将自己需要的插件，动态的继承到maven上，从而扩展新的功能。Maven统一了每个项目的构建过程，实现了不同项目的兼容性管理。</p>
+<h2 id="1-2-构建"><a href="#1-2-构建" class="headerlink" title="1.2.构建"></a>1.2.构建</h2><p>​    构建是以我们编写的java代码，框架配置文件，静态资源等作为原材料，去生成一个可以运行的项目过程。</p>
+<h2 id="1-3构建的主要环节"><a href="#1-3构建的主要环节" class="headerlink" title="1.3构建的主要环节"></a>1.3构建的主要环节</h2><p>①清理：清理删除之前项目的的编译结果，为本次项目编译做准备。</p>
+<p>②编译：将Java源程序的代码编译为字节码文件。</p>
+<p>③测试：针对项目中的一些重要的关键点进行测试，确保项目在开发过程中重要关键点无误。</p>
+<p>④报告：每次测试后用标准格式记录和显示测试结果。</p>
+<p>⑤打包：将一个包含许多文件的工程封装压缩为一个压缩文件，然后用于用于以后的安装或部署。Java工程打包之后对应的是jar包，Web工程打包之后对应的是war包。</p>
+<p>⑥安装：在Maven环境下特指将打包的结果——jar包或war包安装到本地仓库中。</p>
+<p>⑦部署：将打包的结果部署到远程仓库或将war包部署到服务器上运行。</p>
+<h2 id="1-5核心概念"><a href="#1-5核心概念" class="headerlink" title="1.5核心概念"></a>1.5核心概念</h2><p>1.约定的目录结构</p>
+<p>2.pom</p>
+<p>3.坐标</p>
+<p>4.依赖</p>
+<p>5.仓库</p>
+<p>6.生命周期。插件</p>
+<p>7.继承</p>
+<p>8.聚合</p>
+<p><img src="C:\Users\Lenovo\Pictures\3F1C2D2D-E4B4-4f06-829D-9C8FA79D3531.png" srcset="/myblog/img/loading.gif" lazyload></p>
+<h2 id="1-6-第一个Maven项目"><a href="#1-6-第一个Maven项目" class="headerlink" title="1.6.第一个Maven项目"></a>1.6.第一个Maven项目</h2><h2 id="1-7-POM"><a href="#1-7-POM" class="headerlink" title="1.7.POM"></a>1.7.POM</h2><p>1.POM:Project Object Model项目对象模型</p>
+<p>2.pom.xml:对于maven，它是核心配置文件，与构建过程中相关的配置文件，都在这个文件中进行</p>
+<h2 id="1-8-坐标"><a href="#1-8-坐标" class="headerlink" title="1.8.坐标"></a>1.8.坐标</h2><p>1.数学：</p>
+<p>​    平面：x,y</p>
+<p>​    空间：x，y，z</p>
+<p>2.maven</p>
+<p>​        groupid:公司或组织的域名倒叙+项目名</p>
+<p>​        artifactid：模块名</p>
+<p>​        version：版本</p>
+<h2 id="1-9-仓库"><a href="#1-9-仓库" class="headerlink" title="1.9.仓库"></a>1.9.仓库</h2><p>1.仓库分类</p>
+<p>​        1.本地仓库：在本地电脑上部署的仓库</p>
+<p>​        2.远程仓库：</p>
+<p>​            1.私服：</p>
+<p>​            2.中央仓库：架设在internet上，为全世界的maven项目提供服务</p>
+<p>​            3.中央仓库镜像：分担中央仓库的访问压力</p>
+<p>2.仓库中保存的内容</p>
+<p>​        1.maven自身需要的插件</p>
+<p>​        2.第三方架构或工具的jar包</p>
+<p>​        3.我们自己开发的maven项目</p>
+<h2 id="1-10依赖"><a href="#1-10依赖" class="headerlink" title="1.10依赖"></a>1.10依赖</h2><p> 1.compile: 编译依赖范围。如果没有指定，就会默认使用该依赖范围。使用此依赖范围的maven依赖，对于编译 测试 运行三种的classpath都有效。</p>
+<p>  2.test：测试依赖范围。使用此依赖范围的Maven依赖，只对于测试的classpath有效，在编译主代码或者运行主代码的时候都无法依赖此类依赖。典型的例子是jUnit,它只有在编译测试代码及运行测试代码的时候才有效。</p>
+<p>  3.provided:以提供依赖范围。使用此依赖范围的maven依赖，对于编译和测试classpath有效，但在运行时无效。典型的例子是servlet-api，编译和测试项目的时候需要该依赖，但在运行的时候，由于容器已经提供，就不需要maven重复地引入一遍。打包的时候可以不用包进去，别的设施会提供。事实上该依赖理论上可以参与编译，测试，运行等周期。相当于compile，但是打包阶段做了exclude操作</p>
+<p>- compile依赖范围<br>  - 主程序：有效<br>  - 测试程序：有效<br>  - 打包：参与<br>  - 部署：参与<br>- test依赖范围<br>  - 主程序：无效<br>  - 测试程序：有效<br>  - 打包：不参与<br>- provided依赖范围<br>  - 主程序：有效<br>  - 测试程序：有效<br>  - 打包：不参与<br>  - 部署：不参与，原本的依赖由服务器提供</p>
+<h2 id="1-11常见的依赖范围对比"><a href="#1-11常见的依赖范围对比" class="headerlink" title="1.11常见的依赖范围对比"></a>1.11常见的依赖范围对比</h2><p>compile</p>
+<p>test</p>
+<p>provided</p>
+<h2 id="1-12依赖排除"><a href="#1-12依赖排除" class="headerlink" title="1.12依赖排除"></a>1.12依赖排除</h2><p>单依赖过滤：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java">&lt;dependency&gt;    <br>    &lt;groupId&gt;org.apache.hbase&lt;/groupId&gt;<br>    &lt;artifactId&gt;hbase&lt;/artifactId&gt;<br>    &lt;version&gt;<span class="hljs-number">0.94</span><span class="hljs-number">.17</span>&lt;/version&gt; <br>    &lt;exclusions&gt;  <br>         &lt;exclusion&gt;     <br>             &lt;groupId&gt;commons-logging&lt;/groupId&gt;        <br>             &lt;artifactId&gt;commons-logging&lt;/artifactId&gt;  <br>         &lt;/exclusion&gt;  <br>    &lt;/exclusions&gt;  <br>&lt;/dependency&gt;<br></code></pre></td></tr></table></figure>
+
+<p>多依赖过滤</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java">&lt;dependency&gt;<br>    &lt;groupId&gt;org.apache.hbase&lt;/groupId&gt;<br>    &lt;artifactId&gt;hbase&lt;/artifactId&gt;<br>    &lt;version&gt;<span class="hljs-number">0.94</span><span class="hljs-number">.17</span>&lt;/version&gt;<br>    &lt;exclusions&gt;<br>        &lt;exclusion&gt;<br>            &lt;groupId&gt;*&lt;/groupId&gt;<br>            &lt;artifactId&gt;*&lt;/artifactId&gt;<br>        &lt;/exclusion&gt;<br>    &lt;/exclusions&gt;<br>&lt;/dependency&gt;<br></code></pre></td></tr></table></figure>
+
+<h2 id="1-13-依赖原则"><a href="#1-13-依赖原则" class="headerlink" title="1.13.依赖原则"></a>1.13.依赖原则</h2><p>1、就近原则</p>
+<p>2、先到先得</p>
+<h2 id="1-14-统一管理依赖"><a href="#1-14-统一管理依赖" class="headerlink" title="1.14.统一管理依赖"></a>1.14.统一管理依赖</h2><p>在dependencies标签的上方，</p>
+
             </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
                 
-                  <div class="post-meta mr-3">
-                    <i class="iconfont icon-category"></i>
-                    
-                      <a class="hover-with-bg" href="/myblog/categories/hexo%E5%85%A5%E9%97%A8/">hexo入门</a>
-                    
-                  </div>
-                
-                
-                  <div class="post-meta">
-                    <i class="iconfont icon-tags"></i>
-                    
-                      <a class="hover-with-bg" href="/myblog/tags/hexo/">hexo</a>
-                    
-                      <a class="hover-with-bg" href="/myblog/tags/fluid/">fluid</a>
-                    
-                  </div>
                 
               </div>
               
@@ -264,12 +301,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/myblog/2021/07/16/XML%E7%AC%94%E8%AE%B0/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">xml</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/myblog/2021/10/05/JSP%20+%20Servlet/">
-                        <span class="hidden-mobile">jsp+servlet</span>
+                      <a href="/myblog/2021/06/24/%E5%88%86%E9%A1%B5%E6%9F%A5%E8%AF%A2/">
+                        <span class="hidden-mobile">分页查询</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

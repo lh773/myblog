@@ -1,0 +1,808 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/myblog/img/favicon.png">
+  <link rel="icon" href="/myblog/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+  <title>xml - Hexo</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/myblog/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/myblog/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"lh773.github.io","root":"/myblog/","version":"1.8.11","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}},"search_path":"/local-search.xml"};
+  </script>
+  <script  src="/myblog/js/utils.js" ></script>
+  <script  src="/myblog/js/color-schema.js" ></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/myblog/">&nbsp;<strong>陌轩</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/myblog/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/myblog/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/myblog/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/myblog/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                Tags
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/myblog/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/myblog/img/default.png') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="xml">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-07-16 00:00" pubdate>
+        July 16, 2021 am
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      2.6k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      39
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">xml</h1>
+            
+            <div class="markdown-body">
+              <h1 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h1><h2 id="1、概念"><a href="#1、概念" class="headerlink" title="1、概念"></a>1、概念</h2><p>xml：Extendsible Markup Language 可扩展标记语言</p>
+<h4 id="1、可扩展"><a href="#1、可扩展" class="headerlink" title="1、可扩展"></a>1、可扩展</h4><h4 id="2、多功能"><a href="#2、多功能" class="headerlink" title="2、多功能"></a>2、多功能</h4><p>1、配置文件</p>
+<p>2、在网络中传输</p>
+<h4 id="3、与xml的区别"><a href="#3、与xml的区别" class="headerlink" title="3、与xml的区别"></a>3、与xml的区别</h4><p>1、XML标签是自定义的，HTML标签是预定义的。</p>
+<p>2、XML的语法严格，HTML语法松散</p>
+<p>3、XML是存储数据的，HTML是展示数据</p>
+<h2 id="2、语法"><a href="#2、语法" class="headerlink" title="2、语法"></a>2、语法</h2><h4 id="1、语法"><a href="#1、语法" class="headerlink" title="1、语法"></a>1、语法</h4><p>   1、XML文档的后缀：.xml</p>
+<ol start="2">
+<li>XML文档的第一行必须是文档声明： <?xml version='1.0'?></li>
+<li>XML文档中有且仅有一个根标签</li>
+<li>属性值必须使用引号（单双引号均可）引起来</li>
+<li>标签必须正确关闭</li>
+<li>XML标签区分大小写</li>
+</ol>
+<p><strong>案例</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java">&lt;?xml version=<span class="hljs-string">&#x27;1.0&#x27;</span>?&gt;<br>                  &lt;users&gt;<br>                      &lt;user id=<span class="hljs-string">&#x27;1&#x27;</span>&gt;<br>                          &lt;name&gt;比尔盖茨&lt;/name&gt;<br>                          &lt;age&gt;<span class="hljs-number">67</span>&lt;/age&gt;<br>                          &lt;gender&gt;male&lt;/gender&gt;<br>                      &lt;/user&gt;<br><br>                      &lt;user id=<span class="hljs-string">&#x27;2&#x27;</span>&gt;<br>                          &lt;name&gt;乔布斯&lt;/name&gt;<br>                          &lt;age&gt;<span class="hljs-number">64</span>&lt;/age&gt;<br>                          &lt;gender&gt;male&lt;/gender&gt;<br>                      &lt;/user&gt;<br>                  &lt;/users&gt;<br><br></code></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="2、组成"><a href="#2、组成" class="headerlink" title="2、组成"></a>2、组成</h4><h5 id="1、文档声明"><a href="#1、文档声明" class="headerlink" title="1、文档声明"></a>1、文档声明</h5><p>​    格式：&lt;？xml 属性列表 ？&gt;</p>
+<p>​    属性列表：version:版本号</p>
+<p>​                        encoding:编译格式，告知解析引擎当前文件使用的编码格式，默认：ISO-8859-1</p>
+<p>​                        standalone:是否独立</p>
+<p>​                                yes</p>
+<pre><code>                           no
+</code></pre>
+<p>​        </p>
+<h5 id="2、指令"><a href="#2、指令" class="headerlink" title="2、指令"></a>2、指令</h5><p>与css结合控制xml样式，现在已经不用了</p>
+<h5 id="3、标签"><a href="#3、标签" class="headerlink" title="3、标签"></a>3、标签</h5><p>​    规则：</p>
+<p>​    1、名称可以包含字母、数字、其他符号</p>
+<p>​    2、名称不能以数字或者标点符号开始</p>
+<p>​    3、名称不能以 字母组合xml（任何大小写组合都不行，XML，Xml等）开始</p>
+<p>​    4、名称不能包含空格</p>
+<h5 id="4、属性"><a href="#4、属性" class="headerlink" title="4、属性"></a>4、属性</h5><p>规则：<br>          1. 以键值对的形式存在<br>                      2. 属性必须用引号引起来<br>                      3. id属性值必须唯一</p>
+<h5 id="5、文本"><a href="#5、文本" class="headerlink" title="5、文本"></a>5、文本</h5><p>注意：</p>
+<pre><code>     1. 文本中 包含  &lt; , &gt; , &amp; 必须使用转译字符： &lt;  =  &amp;lt;  ,  &amp; = &amp;amp;  ,  &gt;  =  &amp;gt;
+
+     2. CDATA区：该区域中的数据会被原样输出，不必使用转译字符
+                              格式：  &lt;![CDATA[内容]]&gt;
+                                 &lt;![CDATA[ if(a&gt;b &amp;&amp; a&lt;100) ]]&gt;
+</code></pre>
+<h2 id="3、约束"><a href="#3、约束" class="headerlink" title="3、约束"></a>3、约束</h2><p>3.1 概述：</p>
+<pre><code>            规定xml文档的书写规范
+
+               2. 学习要求：
+
+                 能够在xml中引入约束文档
+                     能够大致读懂约束文档
+</code></pre>
+<p>3.3约束图解</p>
+<p><img src="C:\Users\Lenovo\Pictures\QQ截图20210712203940.png" srcset="/myblog/img/loading.gif" lazyload></p>
+<ol start="4">
+<li><p>分类</p>
+<pre><code>                  DTD：简单的约束 技术
+                  Schema:复杂的约束技术
+
+         3.2 DTD
+
+              引入：
+ 
+                  内部DTD:将约束规则定义在XML文档中（写完外部再写内部即可）
+</code></pre>
+</li>
+</ol>
+<pre><code>                   &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+                   &lt;!--&lt;!DOCTYPE students SYSTEM &quot;\dtd\Student.dtd&quot;&gt;--&gt;
+                   &lt;!DOCTYPE students [
+                           &lt;!--students 标签，它内部可以包含0-n个 student标签--&gt;
+                           &lt;!ELEMENT students (student*)&gt;
+                           &lt;!--student 标签，它内部包含name,age,sex三个标签,顺序必须按照规定顺序，并且只能出现一次--&gt;
+                           &lt;!ELEMENT student (name,age,sex)&gt;
+                           &lt;!--name 标签 #pcdata代表 String类型--&gt;
+                           &lt;!ELEMENT name (#PCDATA)&gt;
+                           &lt;!ELEMENT age (#PCDATA)&gt;
+                           &lt;!ELEMENT sex (#PCDATA)&gt;
+                           &lt;!--定义属性：student标签中  number:属性名   ID：唯一  #required:必须的--&gt;
+                           &lt;!ATTLIST student number ID #REQUIRED&gt;
+                           ]&gt;
+                   &lt;students&gt;
+                       &lt;student number=&quot;s001&quot;&gt;
+                           &lt;name&gt;刘德华&lt;/name&gt;
+                           &lt;age&gt;25&lt;/age&gt;
+                           &lt;sex&gt;男&lt;/sex&gt;
+                       &lt;/student&gt;
+                   &lt;/students&gt;
+
+                     外部DTD：将约束的规则定义在外部DTD中
+
+                          本地： &lt;!DOCTYPE 根标签名 SYSTEM &quot;DTD文件位置&quot;&gt;
+
+                          网络: &lt;!DOCTYPE 跟标签名 PUBLIC &quot;DTD文件名&quot; &quot;DTD文件位置（URL）&quot;
+                 先写DTD约束
+
+                   &lt;!--students 标签，它内部可以包含0-n个 student标签--&gt;
+                   &lt;!ELEMENT students (student*)&gt;
+                   &lt;!--student 标签，它内部包含name,age,sex三个标签,顺序必须按照规定顺序，并且只能出现一 次--&gt;
+                   &lt;!ELEMENT student (name,age,sex)&gt;
+                   &lt;!--name 标签 #pcdata代表 String类型--&gt;
+                   &lt;!ELEMENT name (#PCDATA)&gt;
+                   &lt;!ELEMENT age (#PCDATA)&gt;
+                   &lt;!ELEMENT sex (#PCDATA)&gt;
+                   &lt;!--定义属性：student标签中  number:属性名   ID：唯一  #required:必须的--&gt;
+                   &lt;!ATTLIST student number ID #REQUIRED&gt;
+
+                 再写XML，并引入DTD
+
+
+                   &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;
+                   &lt;!DOCTYPE students SYSTEM &quot;\dtd\Student.dtd&quot;&gt;
+                   &lt;students&gt;
+                       &lt;student number=&quot;s001&quot;&gt;
+                           &lt;name&gt;刘德华&lt;/name&gt;
+                           &lt;age&gt;25&lt;/age&gt;
+                           &lt;sex&gt;男&lt;/sex&gt;
+                       &lt;/student&gt;
+                   &lt;/students&gt;
+
+                     通过上述案例，我们不难发现DTD的弊端：无法对属性内容进行限定。比如我们无法去限定
+                 age必须在0~100之间。
+
+            3.3 Schema
+
+
+            Schema文档要求能够读懂，可以做简单修改即可。
+
+            Student.xsd
+
+
+              &lt;?xml version=&quot;1.0&quot;?&gt;
+              &lt;xsd:schema xmlns=&quot;http://www.wdzl.cn/xml&quot;
+                      xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;
+                      targetNamespace=&quot;http://www.wdzl.cn/xml&quot; elementFormDefault=&quot;qualified&quot;&gt;
+                  &lt;xsd:element name=&quot;students&quot; type=&quot;studentsType&quot;/&gt;
+                  &lt;xsd:complexType name=&quot;studentsType&quot;&gt;
+                      &lt;xsd:sequence&gt;
+                          &lt;xsd:element name=&quot;student&quot; type=&quot;studentType&quot; minOccurs=&quot;0&quot;
+              maxOccurs=&quot;unbounded&quot;/&gt;
+                      &lt;/xsd:sequence&gt;
+                  &lt;/xsd:complexType&gt;
+                  &lt;xsd:complexType name=&quot;studentType&quot;&gt;
+                      &lt;xsd:sequence&gt;
+                          &lt;xsd:element name=&quot;name&quot; type=&quot;xsd:string&quot;/&gt;
+                          &lt;xsd:element name=&quot;age&quot; type=&quot;ageType&quot; /&gt;
+                          &lt;xsd:element name=&quot;sex&quot; type=&quot;sexType&quot; /&gt;
+                      &lt;/xsd:sequence&gt;
+                      &lt;xsd:attribute name=&quot;number&quot; type=&quot;numberType&quot; use=&quot;required&quot;/&gt;
+                  &lt;/xsd:complexType&gt;
+                  &lt;xsd:simpleType name=&quot;sexType&quot;&gt;
+
+                      &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;
+                          &lt;xsd:enumeration value=&quot;male&quot;/&gt;
+                          &lt;xsd:enumeration value=&quot;female&quot;/&gt;
+                      &lt;/xsd:restriction&gt;
+                  &lt;/xsd:simpleType&gt;
+                  &lt;xsd:simpleType name=&quot;ageType&quot;&gt;
+                      &lt;xsd:restriction base=&quot;xsd:integer&quot;&gt;
+                          &lt;xsd:minInclusive value=&quot;0&quot;/&gt;
+                          &lt;xsd:maxInclusive value=&quot;256&quot;/&gt;
+                      &lt;/xsd:restriction&gt;
+                  &lt;/xsd:simpleType&gt;
+                  &lt;xsd:simpleType name=&quot;numberType&quot;&gt;
+                      &lt;xsd:restriction base=&quot;xsd:string&quot;&gt;
+                          &lt;xsd:pattern value=&quot;IT_\d&#123;3&#125;&quot;/&gt;
+                      &lt;/xsd:restriction&gt;
+                  &lt;/xsd:simpleType&gt;
+              &lt;/xsd:schema&gt;
+
+            头信息：
+
+
+            主体部分：
+
+
+            Student.xml
+
+              &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+              &lt;!--
+                   1. xml的根元素
+                   2.引入xsi前缀-固定格式：http://www.w3.org/2001/XMLSchema-instance
+                   3.引入xsd文件命名空间：xsi:schemaLocation=&quot;http://www.wdzl.cn/xml student.xsd
+                      *http://www.wdzl.cn/xml：命名空间
+                      *student.xsd：文件存储路径
+                   4.为每一个 xsd 约束 声明一个前缀，作为标识
+                      *因为一个xml中可能有多个约束文档，前缀的作用用于区分同名标签属于哪一个xsd的情况
+                      *声明格式：&lt;xmlns:标签名=“命名空间”&gt;
+
+                      *使用格式：&lt;a:name&gt;&lt;/a:name&gt;,不写使用默认空前缀
+              --&gt;
+              &lt;a:students xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+                        xsi:schemaLocation=&quot;http://www.wdzl.cn/xml student.xsd&quot;
+                        xmlns:a=&quot;http://www.wdzl.cn/xml&quot;&gt;
+              &lt;a:student number=&quot;wdzl_0001&quot;&gt;
+                  &lt;a:name&gt;周杰a:伦&lt;/a:name&gt;
+                  &lt;a:age&gt;18&lt;/a:age&gt;
+                  &lt;a:sex&gt;female&lt;/a:sex&gt;
+              &lt;/a:student&gt;
+                  &lt;a:student number=&quot;wdzl_0002&quot;&gt;
+                      &lt;a:name&gt;呵呵&lt;/name&gt;
+                      &lt;a:age&gt;17&lt;/age&gt;
+                      &lt;a:sex&gt;male&lt;/sex&gt;
+                  &lt;/a:student&gt;
+              &lt;a:/students&gt;
+</code></pre>
+<h2 id="4、解析"><a href="#4、解析" class="headerlink" title="4、解析"></a>4、解析</h2><h5 id="4-1-常见XML操作"><a href="#4-1-常见XML操作" class="headerlink" title="4.1 常见XML操作"></a>4.1 常见XML操作</h5><pre><code>               1. 解析（读取）：将文档中的数据读取到内存中
+               2. 写入（持久化）：将内存中的数据保存到xml文档中。不常用
+
+            4.2 解析XML的方式
+
+
+               1. DOM：将标记语言文档一次性加载进内存，在内存中形成一颗dom树
+
+
+                 优点：操作简单，可以对文档进行CRUD的所有操作
+
+                 缺点：占内存，不适用移动和嵌入式设备。
+               2. SAX：逐行读取，基于事件驱动的解析方式
+
+                 Sun公司在JDK5版本对DOM解析技术的升级，并命名为SAX（Simple API for XML）。SAX是逐行
+                 读取xml文件，不会创建大量的DOM对象，所以在内存使用和性能上，都优于DOM解析。
+                   3. 第三方的解析
+                     jdom：在dom基础上进行封装。
+                     dom4j：是在jdom上进行了在封装。
+                     pull 主要用在Android手机开发。它与SAX非常类似，都是事件驱动方式解析xml文件。
+            3. dom4j解析技术 - 重点
+
+            3.1 dom4j类库的使用
+
+
+            由于dom4j它不是sun公司的技术，而属于第三方公司的技术，需要我们配置依赖jar包。
+
+            3.2 dom4j解析案例
+
+
+            1. 准备xml解析用例
+
+
+              &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+              &lt;books&gt;
+                  &lt;book bid=&quot;BID123456&quot;&gt;
+                      &lt;name&gt;Java葵花宝典&lt;/name&gt;
+                      &lt;price&gt;20.50&lt;/price&gt;
+                      &lt;author&gt;詹姆斯高斯林&lt;/author&gt;
+                  &lt;/book&gt;
+                  &lt;book bid=&quot;BID223456&quot;&gt;
+                      &lt;name&gt;JavaSE入门宝典&lt;/name&gt;
+                      &lt;price&gt;29.90&lt;/price&gt;
+                      &lt;author&gt;比尔盖茨&lt;/author&gt;
+                  &lt;/book&gt;
+              &lt;/books&gt;
+
+
+            2. 准备对应的Book类
+
+
+              public class Book &#123;
+                  private String bid;
+                  private String name;
+                  private String price;
+                  private String author;
+
+                  public Book() &#123;
+                  &#125;
+
+
+                  public Book(String bid, String name, String price, String author) &#123;
+                      this.bid = bid;
+                      this.name = name;
+                      this.price = price;
+                      this.author = author;
+                  &#125;
+
+                  public String getBid() &#123;
+                      return bid;
+                  &#125;
+
+                  public void setBid(String bid) &#123;
+                      this.bid = bid;
+
+
+
+                  &#125;
+
+                  public String getName() &#123;
+                      return name;
+                  &#125;
+
+                  public void setName(String name) &#123;
+                      this.name = name;
+                  &#125;
+
+
+                  public String getPrice() &#123;
+                      return price;
+                  &#125;
+
+
+                  public void setPrice(String price) &#123;
+                      this.price = price;
+                  &#125;
+
+                  public String getAuthor() &#123;
+                      return author;
+                  &#125;
+
+                  public void setAuthor(String author) &#123;
+                      this.author = author;
+                  &#125;
+
+
+                  @Override
+                  public String toString() &#123;
+                      return &quot;Book&#123;&quot; +
+                              &quot;bid=&#39;&quot; + bid + &#39;\&#39;&#39; +
+                              &quot;, name=&#39;&quot; + name + &#39;\&#39;&#39; +
+                              &quot;, price=&quot; + price +
+                              &quot;, author=&#39;&quot; + author + &#39;\&#39;&#39; +
+                              &#39;&#125;&#39;;
+                  &#125;
+              &#125;
+
+            3. 新建jar包，并将jar添加到项目中
+
+            4.使用dom4j读取xml文件
+
+
+                  @Test
+                  public void test() throws DocumentException &#123;
+                      //创建一个SAXReader输入流，读取xml文件，生成Document对象
+                      SAXReader saxReader = new SAXReader();
+                      Document document = saxReader.read(&quot;xml\\book.xml&quot;);
+                      System.out.println(document);
+                  &#125;
+
+
+            结果：
+
+
+            5. 通过Document对象获取xml数据包装成实体类
+
+
+               //读取books.xml文件生成book类
+                  @Test
+                  public void test2() throws DocumentException &#123;
+                     //1.读取book.xml文件
+                      SAXReader saxReader = new SAXReader();
+                      Document document = saxReader.read(&quot;xml\\book.xml&quot;);
+                      //2.通过Document对象获取根元素
+                      Element rootElement = document.getRootElement();
+
+
+                      //3.通过跟元素获取book标签对象
+                      //element() 和 elements()都可以获取子元素，我们只需要根据子元素的多少选择用哪一个
+              即可
+                      List&lt;Element&gt; books = rootElement.elements(&quot;book&quot;);
+                      //4.遍历，处理每个标签转换为Book类
+                      for (Element book : books) &#123;
+                          //asXML():将标签对象，转换为标签对应的字符串
+
+                         // System.out.println(book.asXML());
+
+                          //单独拿出name标签
+                          Element nameElement = book.element(&quot;name&quot;);
+                          //System.out.println(nameElement.asXML());
+
+                          // getText() 获取标签中的文本内容
+                          String nameText = nameElement.getText();
+                          //System.out.println(nameText);
+
+
+                          // 直接获取指定标签名的文本内容
+                          String priceText = book.elementText(&quot;price&quot;);
+                          String authorText = book.elementText(&quot;author&quot;);
+                          //System.out.println(nameText+&quot;--&quot;+priceText+&quot;--&quot;+authorText);
+
+                          // 获取属性
+                          String bid = book.attributeValue(&quot;bid&quot;);
+              //            System.out.println(bid+&quot;--&quot;+nameText+&quot;--&quot;+priceText+&quot;--
+              &quot;+authorText);
+                          System.out.println(new Book(bid,nameText,priceText,authorText));
+                      &#125;
+                  &#125;
+</code></pre>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/myblog/2021/07/23/MyBatis%E6%A1%86%E6%9E%B6/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">mybatis框架</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/myblog/2021/07/12/Maven/">
+                        <span class="hidden-mobile">maven</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+  </div>
+  
+
+  
+
+  
+</footer>
+
+
+  <!-- SCRIPTS -->
+  
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" ></script>
+<script  src="/myblog/js/events.js" ></script>
+<script  src="/myblog/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/myblog/js/img-lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.3/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.1/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.8/dist/clipboard.min.js" ></script>
+
+
+
+  <script  src="/myblog/js/local-search.js" ></script>
+
+
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/myblog/js/boot.js" ></script>
+
+
+</body>
+</html>
